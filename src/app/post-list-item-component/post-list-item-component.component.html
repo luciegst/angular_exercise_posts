@@ -1,9 +1,7 @@
 <li class="list-group-item">
-  <p class="date">Date</p>
+  <p class="date">{{ lastUpdate | date: 'dd/MM/yyyy, h:mm a' }}</p>
   <h3>{{ postTitle }}</h3>
-  <p>Sint in cupidatat dolor sunt anim anim Lorem duis consectetur aliquip excepteur Lorem aliqua. Do reprehenderit
-    exercitation amet velit incididunt ad est sint occaecat deserunt incididunt exercitation pariatur eiusmod.
-    Consequat incididunt qui nulla commodo commodo ullamco eiusmod tempor proident ex est sit nostrud mollit.</p>
-    <button type="button" class="btn btn-success">Love it!</button>
-    <button type="button" class="btn btn-danger">Don't love it!</button>
-  </li>
+  <p>{{ postContent }}</p>
+  <button type="button" class="btn btn-success" (click)="onLike()">Love it!</button>
+  <button type="button" class="btn btn-danger" (click)="onDislike()">Don't love it!</button>
+</li>

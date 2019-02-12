@@ -6,14 +6,23 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./post-list-item-component.component.scss']
 })
 export class PostListItemComponentComponent implements OnInit {
+  lastUpdate = new Date();
 
   @Input() postTitle: string;
+  @Input() postContent: string;
 
-  postOne = 'Mon premier post';
-  postTwo = 'Mon deuxième post';
-  postThree = 'Encore un post';
 
   constructor() { }
+
+  onLike() {
+    console.log('One more like');
+  }
+
+  onDislike() {
+    console.log('One more dislike')
+  }
+
+
 
   ngOnInit() {
   }
