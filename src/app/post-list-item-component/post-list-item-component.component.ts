@@ -7,21 +7,24 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PostListItemComponentComponent implements OnInit {
   lastUpdate = new Date();
+  loveIts: number = 0;
 
   @Input() postTitle: string;
   @Input() postContent: string;
+  
+  
+  constructor() {
 
+  }
 
-  constructor() { }
 
   onLike() {
-    console.log('One more like');
+    this.loveIts += 1
   }
 
   onDislike() {
-    console.log('One more dislike')
+    this.loveIts -= 1
   }
-
 
 
   ngOnInit() {
